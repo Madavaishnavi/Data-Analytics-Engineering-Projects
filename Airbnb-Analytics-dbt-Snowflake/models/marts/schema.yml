@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: mart_listing_summary
+    description: "Aggregated listing-level metrics joined from calendar and review data"
+    columns:
+      - name: listing_id
+        description: "Unique ID for each listing"
+        tests:
+          - not_null
+          - unique
+      - name: avg_price_usd
+        description: "Average nightly price for the listing"
+      - name: available_days
+        description: "Total number of available nights in the calendar"
+      - name: total_reviews
+        description: "Number of distinct review dates for the listing"
+      - name: last_review_date
+        description: "Most recent review date"
+
+  - name: mart_calendar_metrics
+    description: "Monthly price and availability trends for listings"
+    columns:
+      - name: listing_id
+        tests:
+          - not_null
+      - name: month
+        tests:
+          - not_null
+  - name: mart_review_insights
+    description: "Review insights per listing, including review counts and dates"
+    columns:
+      - name: listing_id
+        tests:
+          - not_null
+          - unique
+      - name: total_reviews
+        description: "Number of reviews for the listing"
+      - name: latest_review_date
+        description: "Most recent review received"
