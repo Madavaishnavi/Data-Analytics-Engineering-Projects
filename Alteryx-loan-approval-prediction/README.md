@@ -1,6 +1,6 @@
-# Credit Risk Prediction – Alteryx Workflow
+# Loan Approval Prediction – Alteryx Workflow
 
-This project presents a complete Credit Risk Prediction workflow using **Alteryx Designer**. The goal of the challenge is to predict whether a loan applicant will be approved based on their financial and demographic profile.
+This project presents a complete Loan approval Prediction workflow using **Alteryx Designer**. The goal of the challenge is to predict whether a loan applicant will be approved based on their financial and demographic profile.
 
  **Problem Statement**: The goal of this project is to build a complete data analytics and predictive modeling pipeline using Alteryx Designer. The task is to prepare real-world credit data from a Kaggle competition, engineer meaningful features, and apply a logistic regression model to predict whether a loan applicant is approved or not.
 
